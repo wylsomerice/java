@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить новое устройство</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1>Добавить новое устройство</h1>
+    <form action="/deviceAndOids/new" method="post">
+        <div class="mb-3">
+            <label for="deviceForMonitoringKey" class="form-label">Ключ устройства</label>
+            <input type="number" class="form-control" id="deviceForMonitoringKey" name="deviceForMonitoringKey" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="oidForDeviceKey" class="form-label">OID</label>
+            <input type="number" class="form-control" id="oidForDeviceKey" name="oidForDeviceKey" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="timeout" class="form-label">Timeout</label>
+            <input type="number" class="form-control" id="timeout" name="timeout" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="invertible" class="form-label">Invertible</label>
+            <input type="checkbox" id="invertible" name="invertible" value="true">
+        </div>
+
+        <div class="mb-3">
+            <label for="invert" class="form-label">Invert</label>
+            <input type="checkbox" id="invert" name="invert" value="true">
+        </div>
+
+        <div class="mb-3">
+            <label for="enable" class="form-label">Enable</label>
+            <input type="checkbox" id="enable" name="enable" value="true">
+        </div>
+
+        <div class="mb-3">
+            <label for="deviceip" class="form-label">IP-адрес устройства</label>
+            <input type="text" class="form-control" id="deviceip" name="deviceip" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="sendEmail" class="form-label">Отправлять email</label>
+            <input type="checkbox" id="sendEmail" name="sendEmail" value="true">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+    </form>
+    <a href="/deviceAndOids" class="btn btn-secondary mt-3">Назад к списку</a>
+</div>
+
+</body>
+</html>

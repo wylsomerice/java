@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Редактировать устройство</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+  <h1>Редактировать устройство</h1>
+  <form action="/deviceForMonitoring/edit" method="post">
+    <input type="hidden" th:value="${device.key}" name="key">
+    <div class="mb-3">
+      <label for="community" class="form-label">Community</label>
+      <input type="text" class="form-control" id="community" name="community" th:value="${device.community}" required>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Описание</label>
+      <input type="text" class="form-control" id="description" name="description" th:value="${device.description}">
+    </div>
+    <div class="mb-3">
+      <label for="deviceTypeId" class="form-label">ID типа устройства</label>
+      <input type="number" class="form-control" id="deviceTypeId" name="deviceTypeId" th:value="${device.deviceTypeId}" required>
+    </div>
+    <div class="mb-3">
+      <label for="ip" class="form-label">IP-адрес</label>
+      <input type="text" class="form-control" id="ip" name="ip" th:value="${device.ip}" required>
+    </div>
+    <div class="mb-3">
+      <label for="location" class="form-label">Расположение</label>
+      <input type="text" class="form-control" id="location" name="location" th:value="${device.location}">
+    </div>
+    <div class="mb-3">
+      <label for="mac" class="form-label">MAC-адрес</label>
+      <input type="text" class="form-control" id="mac" name="mac" th:value="${device.mac}" required>
+    </div>
+    <div class="mb-3">
+      <label for="sendEmail" class="form-label">Email уведомления</label>
+      <input type="number" class="form-control" id="sendEmail" name="sendEmail" th:value="${device.sendEmail}">
+    </div>
+    <div class="mb-3">
+      <label for="serialNumber" class="form-label">Серийный номер</label>
+      <input type="text" class="form-control" id="serialNumber" name="serialNumber" th:value="${device.serialNumber}">
+    </div>
+    <div class="mb-3">
+      <label for="uptime" class="form-label">Время работы</label>
+      <input type="number" class="form-control" id="uptime" name="uptime" th:value="${device.uptime}" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+  </form>
+  <a href="/deviceForMonitoring" class="btn btn-secondary mt-3">Назад</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить устройство</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1>Добавить устройство</h1>
+    <form action="/deviceForMonitoring/new" method="post">
+        <div class="mb-3">
+            <label for="community" class="form-label">Community</label>
+            <input type="text" class="form-control" id="community" name="community" required>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Описание</label>
+            <input type="text" class="form-control" id="description" name="description">
+        </div>
+        <div class="mb-3">
+            <label for="deviceTypeId" class="form-label">ID типа устройства</label>
+            <input type="number" class="form-control" id="deviceTypeId" name="deviceTypeId" required>
+        </div>
+        <div class="mb-3">
+            <label for="ip" class="form-label">IP-адрес</label>
+            <input type="text" class="form-control" id="ip" name="ip" required>
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">Расположение</label>
+            <input type="text" class="form-control" id="location" name="location">
+        </div>
+        <div class="mb-3">
+            <label for="mac" class="form-label">MAC-адрес</label>
+            <input type="text" class="form-control" id="mac" name="mac" required>
+        </div>
+        <div class="mb-3">
+            <label for="sendEmail" class="form-label">Email уведомления</label>
+            <input type="number" class="form-control" id="sendEmail" name="sendEmail">
+        </div>
+        <div class="mb-3">
+            <label for="serialNumber" class="form-label">Серийный номер</label>
+            <input type="text" class="form-control" id="serialNumber" name="serialNumber">
+        </div>
+        <div class="mb-3">
+            <label for="uptime" class="form-label">Время работы</label>
+            <input type="number" class="form-control" id="uptime" name="uptime" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+    </form>
+    <a href="/deviceForMonitoring" class="btn btn-secondary mt-3">Назад</a>
+</div>
+</body>
+</html>

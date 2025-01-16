@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить модель</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1>Добавить модель</h1>
+    <form th:action="@{/deviceTypes/new}" th:object="${deviceType}" method="post">
+        <div class="mb-3">
+            <label for="id" class="form-label">ID</label>
+            <input type="number" class="form-control" id="id" name="id" th:field="*{id}" required>
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Модель</label>
+            <input type="text" class="form-control" id="name" name="name" th:field="*{name}" required>
+        </div>
+        <div class="mb-3">
+            <label for="inputs" class="form-label">Входы</label>
+            <input type="number" class="form-control" id="inputs" name="inputs" th:field="*{inputs}" required>
+        </div>
+        <div class="mb-3">
+            <label for="outputs" class="form-label">Выходы</label>
+            <input type="number" class="form-control" id="outputs" name="outputs" th:field="*{outputs}" required>
+        </div>
+        <div class="mb-3">
+            <label for="portsPoe" class="form-label">PoE порты</label>
+            <input type="number" class="form-control" id="portsPoe" name="portsPoe" th:field="*{portsPoe}">
+        </div>
+        <div class="mb-3">
+            <label for="portsSfp" class="form-label">SFP порты</label>
+            <input type="number" class="form-control" id="portsSfp" name="portsSfp" th:field="*{portsSfp}">
+        </div>
+        <div class="mb-3">
+            <label for="portsUplink" class="form-label">Uplink порты</label>
+            <input type="number" class="form-control" id="portsUplink" name="portsUplink" th:field="*{portsUplink}">
+        </div>
+        <div class="mb-3">
+            <label for="portsWithoutPoe" class="form-label">Порты без PoE</label>
+            <input type="number" class="form-control" id="portsWithoutPoe" name="portsWithoutPoe" th:field="*{portsWithoutPoe}">
+        </div>
+        <div class="mb-3">
+            <label for="ups" class="form-label">UPS</label>
+            <input type="number" class="form-control" id="ups" name="ups" th:field="*{ups}">
+        </div>
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary">Добавить</button>
+            <a href="/deviceTypes" class="btn btn-secondary">Отмена</a>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
